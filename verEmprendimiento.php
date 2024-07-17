@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprendimientos - Red Social Emprendedores</title>
+    <title>Ver Emprendimiento - Red Social Emprendedores</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/bootstrap.bundle.min.js"></script>
     <style>
-        .card-body h5, .card-body p {
-            text-align: right;
+        .profile-pic-large {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .card-body h5 {
-            margin-bottom: 0;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
         }
-        .card-body p {
-            margin-top: 0;
+        .grid-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -34,51 +47,36 @@
                     <li class="nav-item"><a class="nav-link" href="notificaciones.php">Notificaciones</a></li>
                 </ul>
             </div>
-            <form class="d-flex search-container">
-                <input class="form-control me-2 search-bar" type="search" placeholder="Buscar emprendimientos..." aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit">
-                    <img src="https://cdn1.iconfinder.com/data/icons/search-43/512/20_lense_search_tool_scan-512.png" alt="Buscar" class="search-icon">
-                </button>
-                <a href="crearEmprendimiento.php" class="btn btn-primary ml-2">Crear Emprendimiento</a>
-            </form>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h2>Emprendimientos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" class="profile-pic-large" alt="Emprendimiento">
             </div>
-            <div class="card-body">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 1</h5>
-                            <p class="card-text">Descripción del emprendimiento 1.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=1" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 2</h5>
-                            <p class="card-text">Descripción del emprendimiento 2.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=2" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 3</h5>
-                            <p class="card-text">Descripción del emprendimiento 3.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=3" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
+            <div class="col-md-8">
+                <h2>Nombre del Emprendimiento</h2>
+                <p>Descripción detallada del emprendimiento. Aquí puedes agregar más información sobre el emprendimiento, su misión, visión, servicios, y cualquier otro detalle relevante.</p>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h3>Publicaciones del Emprendimiento</h3>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/100" alt="Publicación 1">
                 </div>
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/100" alt="Publicación 2">
+                </div>
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/100" alt="Publicación 3">
+                </div>
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/100" alt="Publicación 4">
+                </div>
+                <!-- Agrega más publicaciones según sea necesario -->
             </div>
         </div>
     </div>

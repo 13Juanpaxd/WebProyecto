@@ -3,21 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprendimientos - Red Social Emprendedores</title>
+    <title>Términos y Condiciones - Red Social Emprendedores</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <style>
-        .card-body h5, .card-body p {
-            text-align: right;
-        }
-        .card-body h5 {
-            margin-bottom: 0;
-        }
-        .card-body p {
-            margin-top: 0;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,53 +23,30 @@
                     <li class="nav-item"><a class="nav-link" href="notificaciones.php">Notificaciones</a></li>
                 </ul>
             </div>
-            <form class="d-flex search-container">
-                <input class="form-control me-2 search-bar" type="search" placeholder="Buscar emprendimientos..." aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit">
-                    <img src="https://cdn1.iconfinder.com/data/icons/search-43/512/20_lense_search_tool_scan-512.png" alt="Buscar" class="search-icon">
-                </button>
-                <a href="crearEmprendimiento.php" class="btn btn-primary ml-2">Crear Emprendimiento</a>
-            </form>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h2>Emprendimientos</h2>
-            </div>
-            <div class="card-body">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 1</h5>
-                            <p class="card-text">Descripción del emprendimiento 1.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=1" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 2</h5>
-                            <p class="card-text">Descripción del emprendimiento 2.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=2" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 3</h5>
-                            <p class="card-text">Descripción del emprendimiento 3.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=3" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1>Términos y Condiciones</h1>
+        <p>Bienvenido a Red Social Emprendedores. Al acceder o usar nuestro sitio web, aceptas cumplir y estar sujeto a los siguientes términos y condiciones de uso. Si no estás de acuerdo con alguna parte de estos términos, no debes usar nuestro sitio web.</p>
+
+        <h2>1. Uso del Sitio Web</h2>
+        <p>El contenido de las páginas de este sitio web es para tu información general y uso exclusivo. Está sujeto a cambios sin previo aviso.</p>
+
+        <h2>2. Licencia de Uso</h2>
+        <p>Se te concede una licencia limitada para acceder y hacer uso personal de este sitio y no para descargarlo (excepto el almacenamiento en caché) o modificarlo, o cualquier porción del mismo, excepto con el consentimiento expreso por escrito de nosotros.</p>
+
+        <h2>3. Privacidad</h2>
+        <p>Tu uso de este sitio web está sujeto a nuestra política de privacidad, que también rige el sitio y nos informa sobre nuestras prácticas de recopilación de datos.</        <p>Al usar nuestro sitio, también aceptas la forma en que procesamos tus datos personales, conforme a nuestra política de privacidad.</p>
+
+        <h2>4. Prohibiciones</h2>
+        <p>No debes usar este sitio web de ninguna manera que cause, o pueda causar, daño al sitio web o deterioro de la disponibilidad o accesibilidad del sitio web; o de cualquier manera que sea ilegal, fraudulenta o perjudicial, o en conexión con cualquier propósito o actividad ilegal, fraudulenta o perjudicial.</p>
+
+        <h2>5. Cambios en los Términos</h2>
+        <p>Nos reservamos el derecho de realizar cambios en nuestro sitio, políticas y estos términos y condiciones en cualquier momento. Tu uso continuo del sitio web después de cualquier cambio constituirá tu aceptación de dichos cambios.</p>
+
+        <h2>6. Ley Aplicable</h2>
+        <p>Estos términos y condiciones se rigen y se interpretan de acuerdo con las leyes de [tu país], y cualquier disputa relacionada con estos términos y condiciones estará sujeta a la jurisdicción exclusiva de los tribunales de [tu país].</p>
     </div>
 
     <footer class="footer mt-auto py-3 bg-dark text-white">

@@ -3,21 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprendimientos - Red Social Emprendedores</title>
+    <title>Políticas de Privacidad - Red Social Emprendedores</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <style>
-        .card-body h5, .card-body p {
-            text-align: right;
-        }
-        .card-body h5 {
-            margin-bottom: 0;
-        }
-        .card-body p {
-            margin-top: 0;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,53 +23,48 @@
                     <li class="nav-item"><a class="nav-link" href="notificaciones.php">Notificaciones</a></li>
                 </ul>
             </div>
-            <form class="d-flex search-container">
-                <input class="form-control me-2 search-bar" type="search" placeholder="Buscar emprendimientos..." aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit">
-                    <img src="https://cdn1.iconfinder.com/data/icons/search-43/512/20_lense_search_tool_scan-512.png" alt="Buscar" class="search-icon">
-                </button>
-                <a href="crearEmprendimiento.php" class="btn btn-primary ml-2">Crear Emprendimiento</a>
-            </form>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h2>Emprendimientos</h2>
-            </div>
-            <div class="card-body">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 1</h5>
-                            <p class="card-text">Descripción del emprendimiento 1.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=1" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 2</h5>
-                            <p class="card-text">Descripción del emprendimiento 2.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=2" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Emprendimiento 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Emprendimiento 3</h5>
-                            <p class="card-text">Descripción del emprendimiento 3.</p>
-                            <a href="#" class="btn btn-success">Seguir Emprendimiento</a>
-                            <a href="verEmprendimiento.php?id=3" class="btn btn-info">Ver Emprendimiento</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1>Políticas de Privacidad</h1>
+        <p>En Red Social Emprendedores, nos comprometemos a proteger tu privacidad. Esta política de privacidad explica cómo recopilamos, usamos y protegemos la información personal que nos proporcionas al usar nuestro sitio web.</p>
+
+        <h2>1. Información que Recopilamos</h2>
+        <p>Podemos recopilar la siguiente información:</p>
+        <ul>
+            <li>Nombre y apellido</li>
+            <li>Información de contacto, incluyendo dirección de correo electrónico</li>
+            <li>Información demográfica, como código postal, preferencias e intereses</li>
+            <li>Otra información relevante para encuestas y/o ofertas de clientes</li>
+        </ul>
+
+        <h2>2. Uso de la Información</h2>
+        <p>Utilizamos esta información para entender tus necesidades y ofrecerte un mejor servicio, y en particular por las siguientes razones:</p>
+        <ul>
+            <li>Mantenimiento de registros internos.</li>
+            <li>Mejorar nuestros productos y servicios.</li>
+            <li>Enviar correos electrónicos promocionales sobre nuevos productos, ofertas especiales u otra información que pensamos que puede ser de tu interés.</li>
+            <li>Personalizar el sitio web según tus intereses.</li>
+        </ul>
+
+        <h2>3. Seguridad</h2>
+        <p>Estamos comprometidos a garantizar que tu información esté segura. Para prevenir el acceso no autorizado o divulgación, hemos implementado procedimientos físicos, electrónicos y administrativos para salvaguardar y asegurar la información que recopilamos en línea.</p>
+
+        <h2>4. Cómo Usamos las Cookies</h2>
+        <p>Una cookie es un pequeño archivo que pide permiso para ser colocado en el disco duro de tu computadora. Una vez que aceptas, el archivo se agrega y la cookie ayuda a analizar el tráfico web o te permite saber cuándo visitas un sitio en particular.</p>
+
+        <h2>5. Enlaces a Otros Sitios Web</h2>
+        <p>Nuestro sitio web puede contener enlaces a otros sitios de interés. Sin embargo, una vez que hayas usado estos enlaces para salir de nuestro sitio, debes tener en cuenta que no tenemos control sobre ese otro sitio web. Por lo tanto, no podemos ser responsables de la protección y privacidad de cualquier información que proporciones mientras visitas dichos sitios y dichos sitios no se rigen por esta política de privacidad.</p>
+
+        <h2>6. Control de tu Información Personal</h2>
+        <p>Puedes optar por restringir la recopilación o el uso de tu información personal de las siguientes maneras:</p>
+        <ul>
+            <li>Siempre que se te pida que rellenes un formulario en el sitio web, busca la casilla en la que puedes hacer clic para indicar que no deseas que la información sea utilizada por nadie con fines de marketing directo.</li>
+            <li>Si has aceptado previamente que usemos tu información personal con fines de marketing directo, puedes cambiar de opinión en cualquier momento escribiéndonos o enviándonos un correo electrónico a [dirección de correo electrónico de soporte].</li>
+        </ul>
+
+        <p>No venderemos, distribuiremos ni cederemos tu información personal a terceros a menos que tengamos tu permiso o estemos obligados por ley a hacerlo.</p>
     </div>
 
     <footer class="footer mt-auto py-3 bg-dark text-white">
