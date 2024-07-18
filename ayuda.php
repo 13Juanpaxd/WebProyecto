@@ -36,7 +36,7 @@
              
                 <li class="nav-item me-4 ">
                 
-                <a class="btn btn-info nav-link" href="messages.php">
+                <a class="btn btn-primary nav-link" href="messages.php">
                 <i class="fas fa-envelope"></i>
                     <span " class="position-absolute  start-10  badge rounded-pill bg-danger">
                         99+
@@ -48,7 +48,7 @@
 
                 <li class="nav-item me-3 ">
                 
-                    <a class="btn btn-warning nav-link" href="notifications.php">
+                    <a class="btn btn-primary nav-link" href="notifications.php">
                     <i class="fa-solid fa-bell"></i>
                         <span class="position-absolute top-0 start-10 badge rounded-pill bg-danger">
                             99+
@@ -82,40 +82,18 @@
         </div>
     </nav>
 
-    <div class="container mt-5 d-flex">
-        <div id="carouselImages" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg" class="d-block w-100" alt="Empresaria">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg" class="d-block w-100" alt="Empresario">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images.pexels.com/photos/1652295/pexels-photo-1652295.jpeg" class="d-block w-100" alt="Cafetería">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-
-        <div class="text-center" style="width: 50%; margin-left: 20px;">
-            <h1>Bienvenido a Red Social Emprendedores</h1>
-            <h2>Somos la red social que conecta negocios con clientes</h2>
-            <p>Conéctate con emprendedores y usuarios, comparte tus ideas y crece juntos.</p>
-            <div class="mt-4">
-                <a href="login.php" class="btn btn-primary btn-lg">Iniciar Sesión</a>
-                <a href="registro.php" class="btn btn-secondary btn-lg">Registrarse</a>
-            </div>
-        </div>
+<div class="container mt-5">
+        <h1>Ayuda</h1>
+        <p>Encuentra respuestas a tus preguntas frecuentes y accede a guías de solución de problemas.</p>
+        <ul>
+            <li><a href="#">Preguntas frecuentes (FAQ)</a></li>
+            <li><a href="#">Guías de inicio rápido</a></li>
+            <li><a href="#">Tutoriales en video</a></li>
+            <li><a href="#">Foros de soporte</a></li>
+        </ul>
     </div>
 
+    
     <footer class="footer fixed-bottom bg-dark text-white">
         <div class="container text-center">
             <p>© <?php echo date('Y'); ?> Red Social Emprendedores. Todos los derechos reservados</p>

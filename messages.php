@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -8,13 +9,28 @@
 
     <script src="https://kit.fontawesome.com/b028410953.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
-
+    <style>
+        .message-card {
+            margin-bottom: 20px;
+        }
+        .card-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-text {
+            margin-bottom: 0;
+        }
+        .message-content {
+            flex-grow: 1;
+        }
+    </style>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="https://www.w3.org/html/logo/downloads/HTML5_1Color_White.png" alt="Logo" class="logo">
                 Red Social Emprendedores
             </a>
@@ -58,6 +74,7 @@
 
                 </li>
 
+                
                 <li class="nav-item dropdown me-5">
 
                 <div class="dropdown">
@@ -75,53 +92,60 @@
                 
                   
                 </li>
-                
-
-                
             </ul>
         </div>
     </nav>
 
-    <div class="container mt-5 d-flex">
-        <div id="carouselImages" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg" class="d-block w-100" alt="Empresaria">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg" class="d-block w-100" alt="Empresario">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images.pexels.com/photos/1652295/pexels-photo-1652295.jpeg" class="d-block w-100" alt="Cafetería">
+    <div class="container mt-5">
+        <h1>Mensajes</h1>
+        <div class="row">
+            
+            <div class="col-md-12 message-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="message-content">
+                            <h5 class="card-title"><i class="fas fa-envelope"></i>  Usuario1</h5>
+                            <p class="card-text">Hola, ¿cómo estás?</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ver Chat</a>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-
-        <div class="text-center" style="width: 50%; margin-left: 20px;">
-            <h1>Bienvenido a Red Social Emprendedores</h1>
-            <h2>Somos la red social que conecta negocios con clientes</h2>
-            <p>Conéctate con emprendedores y usuarios, comparte tus ideas y crece juntos.</p>
-            <div class="mt-4">
-                <a href="login.php" class="btn btn-primary btn-lg">Iniciar Sesión</a>
-                <a href="registro.php" class="btn btn-secondary btn-lg">Registrarse</a>
+           
+            <div class="col-md-12 message-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="message-content">
+                            <h5 class="card-title"><i class="fas fa-envelope"></i>  Usuario2</h5>
+                            <p class="card-text">¿Tienes algún plan para hoy?</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ver Chat</a>
+                    </div>
+                </div>
             </div>
+       
+            <div class="col-md-12 message-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="message-content">
+                            <h5 class="card-title"><i class="fas fa-envelope"></i> Usuario3</h5>
+                            <p class="card-text">Necesito ayuda con mi proyecto.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ver Chat</a>
+                    </div>
+                </div>
+            </div>
+      
         </div>
     </div>
 
-    <footer class="footer fixed-bottom bg-dark text-white">
+<footer class="footer fixed-bottom bg-dark text-white">
         <div class="container text-center">
             <p>© <?php echo date('Y'); ?> Red Social Emprendedores. Todos los derechos reservados</p>
         </div>
     </footer>
 
+ 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
