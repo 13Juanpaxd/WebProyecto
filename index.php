@@ -8,77 +8,25 @@
 
     <script src="https://kit.fontawesome.com/b028410953.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
-
-
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://www.w3.org/html/logo/downloads/HTML5_1Color_White.png" alt="Logo" class="logo">
+                <img src="./images/logo.png" alt="Logo" class="logo">
                 Red Social Emprendedores
             </a>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Iniciar Sesión</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="registro.php">Registrarse</a>
-                    </li>
-
-       
+                    </li>       
                 </ul>
             </div>
- 
-            <ul class="navbar-nav">
-             
-                <li class="nav-item me-4 ">
-                
-                <a class="btn btn-info nav-link" href="messages.php">
-                <i class="fas fa-envelope"></i>
-                    <span " class="position-absolute  start-10  badge rounded-pill bg-danger">
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                    </span>
-                </a>
-
-            </li>
-
-                <li class="nav-item me-3 ">
-                
-                    <a class="btn btn-warning nav-link" href="notifications.php">
-                    <i class="fa-solid fa-bell"></i>
-                        <span class="position-absolute top-0 start-10 badge rounded-pill bg-danger">
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                        </span>
-                    </a>
-
-                </li>
-
-                <li class="nav-item dropdown me-5">
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-cog"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>  <a class="dropdown-item" href="recursos.php">Recursos</a></li>
-                        <li>  <a class="dropdown-item" href="herramientas.php">Herramientas</a></li>
-                        <li> <a class="dropdown-item" href="ayuda.php">Ayuda</a></li>
-                        <li> <a class="dropdown-item" href="soporte.php">Soporte</a></li>
-                    </ul>
-                </div> 
-
-                
-                  
-                </li>
-                
-
-                
-            </ul>
         </div>
     </nav>
 
