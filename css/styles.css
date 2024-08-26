@@ -1,8 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding-bottom: 80px; 
 }
 
 .navbar {
@@ -133,7 +143,9 @@ body {
 .footer {
     padding: 20px 0;
     background-color: #00897b;
-    margin-top: 20px; 
+    margin-top: auto;
+    width: 100%;
+    position: relative;
 }
 
 .carousel img {
@@ -195,4 +207,140 @@ p {
 .card-body {
     display: flex;
     align-items: center; 
+}
+
+.navbar-nav .nav-item .badge-counter {
+    position: relative;
+    top: 0;
+    left: 5px; 
+    transform: translateY(-50%); 
+    font-size: 0.75rem; 
+    padding: 0.25em 0.5em; 
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.badge-counter {
+    margin-left: 5px;
+}
+
+.product-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.accordion-button {
+    font-weight: bold;
+}
+
+/* Estilos generales para la página de contacto */
+.contact-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-header h1 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.25rem;
+    color: #00796b;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #00796b;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #00796b;
+    box-shadow: none;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #004d40;
+    box-shadow: 0 0 5px rgba(0, 77, 64, 0.2);
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    color: #d32f2f;
+}
+
+.btn-primary {
+    background-color: #00897b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #00796b;
+    transform: translateY(-2px);
+}
+
+.alert {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
 }
