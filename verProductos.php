@@ -39,12 +39,29 @@ while ($row = $result->fetch_assoc()) {
         display: none; /* Ocultar por defecto */
         margin-top: 10px;
     }
+
+    .card-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 0.9rem; /* Tamaño de letra más pequeño para la descripción */
+        color: #555; /* Color más tenue para la descripción */
+        margin-left: 15px;
+        flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+    }
 </style>
 <body>    
     <div class="container mt-4">
         <h2>Productos del Negocio</h2>
-        <button class="btn btn-success mb-4" data-bs-toggle="modal" 
-        data-bs-target="#agregarProductoModal">Agregar Producto</button>
+        <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#agregarProductoModal">Agregar Producto</button>
         <a href="misNegocios.php" class="btn btn-info mb-4">Volver a Mis Negocios</a>
         
         <?php if (empty($productos)): ?>
@@ -54,27 +71,18 @@ while ($row = $result->fetch_assoc()) {
                 <?php foreach ($productos as $producto): ?>
                     <div class="col-md-4 mb-4">
                         <div class="card h-100">
-                            <img src="<?php echo $producto['foto'] ? 
-                            $producto['foto'] : 'https://via.placeholder.com/150'; 
-                            ?>" alt="Foto del Producto" class="card-img-top product-img">
+                            <img src="<?php echo $producto['foto'] ? $producto['foto'] : 'https://via.placeholder.com/150'; ?>" alt="Foto del Producto" class="card-img-top product-img">
 
                             <div class="card-body">
-                                <h5 class="card-title"><?php 
-                                echo htmlspecialchars($producto['nombre']); ?></h5>
-                                <p class="card-text"><?php 
-                                echo htmlspecialchars($producto['descripcion']); ?></p>
-                                <p class="card-text"><strong>Precio:
-                                     ¢ </strong><?php echo htmlspecialchars
-                                     ($producto['precio']); ?></p>
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="card-title"><?php echo htmlspecialchars($producto['nombre']); ?></h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($producto['descripcion']); ?></p>
+                                </div>
+                                <p class="card-text"><strong>Precio: ¢ </strong><?php echo htmlspecialchars($producto['precio']); ?></p>
                             </div>
                             <div class="card-footer text-center">
-                                <button class="btn btn-primary" data-bs-toggle=
-                                "modal" data-bs-target="#editarProductoModal" 
-                                data-id="<?php echo $producto['id_Producto']; 
-                                ?>">Editar</button>
-                                <button class="btn btn-danger" onclick=
-                                "eliminarProducto(<?php echo $producto['id_Producto']; 
-                                ?>, <?php echo $idNegocio; ?>)">Eliminar</button>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarProductoModal" data-id="<?php echo $producto['id_Producto']; ?>">Editar</button>
+                                <button class="btn btn-danger" onclick="eliminarProducto(<?php echo $producto['id_Producto']; ?>, <?php echo $idNegocio; ?>)">Eliminar</button>
                             </div>
                         </div>
                     </div>
@@ -84,39 +92,27 @@ while ($row = $result->fetch_assoc()) {
     </div>
 
     <!-- Modal para Agregar Producto -->
-    <div class="modal fade" id="agregarProductoModal" tabindex="-1" 
-    aria-labelledby="agregarProductoModalLabel" aria-hidden="true">
+    <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="guardarProducto.php" method="POST" 
-                enctype="multipart/form-data">
+                <form action="guardarProducto.php" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="agregarProductoModalLabel">
-                            Agregar Producto</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" 
-                        aria-label="Close"></button>
+                        <h5 class="modal-title" id="agregarProductoModalLabel">Agregar Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <input type="hidden" name="cod_Negocio" 
-                        value="<?php echo $idNegocio; ?>">
+                        <input type="hidden" name="cod_Negocio" value="<?php echo $idNegocio; ?>">
                         <div class="mb-3">
-                            <label for="nombreProducto" class="form-label">
-                                Nombre del Producto:</label>
-                            <input type="text" id="nombreProducto" name=
-                            "nombreProducto" class="form-control" required>
+                            <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
+                            <input type="text" id="nombreProducto" name="nombreProducto" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="descripcionProducto" class=
-                            "form-label">Descripción:</label>
-                            <textarea id="descripcionProducto" name=
-                            "descripcionProducto" class="form-control" 
-                            rows="3" required></textarea>
+                            <label for="descripcionProducto" class="form-label">Descripción:</label>
+                            <textarea id="descripcionProducto" name="descripcionProducto" class="form-control" rows="3" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="precioProducto" class="form-label">
-                                Precio:</label>
-                            <input type="number" step="0.01" id="precioProducto" 
-                            name="precioProducto" class="form-control" required>
+                            <label for="precioProducto" class="form-label">Precio:</label>
+                            <input type="number" step="0.01" id="precioProducto" name="precioProducto" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="fotoProducto" class="form-label">Foto del Producto:</label>
@@ -126,8 +122,7 @@ while ($row = $result->fetch_assoc()) {
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Guardar</button>
-                        <button type="button" class="btn btn-secondary" 
-                        data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </form>
             </div>
@@ -144,8 +139,7 @@ while ($row = $result->fetch_assoc()) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <input type="hidden" name="cod_Negocio" 
-                        value="<?php echo $idNegocio; ?>">
+                        <input type="hidden" name="cod_Negocio" value="<?php echo $idNegocio; ?>">
                         <input type="hidden" name="id_Producto">
                         <div class="mb-3">
                             <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
@@ -194,37 +188,19 @@ while ($row = $result->fetch_assoc()) {
                 fetch(`obtenerProducto.php?id=${productoId}`)
                     .then(response => response.json())
                     .then(data => {
-                        if (data.error) {
-                            console.error('Error:', data.error);
+                        if (data.success) {
+                            const form = document.querySelector('#editarProductoModal form');
+                            form.querySelector('input[name="id_Producto"]').value = data.producto.id_Producto;
+                            form.querySelector('input[name="nombreProducto"]').value = data.producto.nombre;
+                            form.querySelector('textarea[name="descripcionProducto"]').value = data.producto.descripcion;
+                            form.querySelector('input[name="precioProducto"]').value = data.producto.precio;
+                            form.querySelector('img#fotoActualProducto').src = data.producto.foto ? data.producto.foto : 'https://via.placeholder.com/150';
+                            form.querySelector('input[name="fotoActual"]').value = data.producto.foto; 
                         } else {
-                            // Rellena el modal con los datos del producto
-                            document.querySelector('#editarProductoModal input[name="id_Producto"]').value = data.id_Producto;
-                            document.querySelector('#editarProductoModal input[name="nombreProducto"]').value = data.nombre;
-                            document.querySelector('#editarProductoModal textarea[name="descripcionProducto"]').value = data.descripcion;
-                            document.querySelector('#editarProductoModal input[name="precioProducto"]').value = data.precio;
-
-                            // Muestra la foto actual
-                            const fotoPath = data.foto ? data.foto : 'https://via.placeholder.com/150'; // Ruta de la foto actual o un placeholder si no existe
-                            document.querySelector('#fotoActualProducto').src = fotoPath;
-                            document.querySelector('#editarProductoModal input[name="fotoActual"]').value = data.foto; // Guardar la ruta de la foto actual en un campo oculto
+                            alert('Error al cargar los datos del producto.');
                         }
-                    })
-                    .catch(error => console.error('Error:', error));
+                    });
             });
-        });
-
-        // JavaScript para manejar la previsualización de la imagen
-        document.getElementById('fotoProducto').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const previewImg = document.getElementById('previewFoto');
-                    previewImg.src = e.target.result;
-                    previewImg.style.display = 'block'; // Muestra la imagen de previsualización
-                };
-                reader.readAsDataURL(file);
-            }
         });
     </script>
 </body>
