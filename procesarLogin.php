@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['telefono'] = $user['telefono'];
                 $_SESSION['sexo'] = $user['sexo'];
                 $_SESSION['foto_perfil'] = $user['foto_perfil'];
-                header("Location: feed.php"); // Dirigir a la página de feed
+                header("Location: emprendedores.php"); // Dirigir a la página de feed
                 exit();
             } else {
                 // Contraseña incorrecta

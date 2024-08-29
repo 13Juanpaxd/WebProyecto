@@ -77,7 +77,7 @@ if (empty($negocios_ids)) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="feed.php">
+            <a class="navbar-brand" href="emprendedores.php">
                 <img src="./images/logo.png" alt="Logo" class="logo">
                 Red Social Emprendedores
                 
