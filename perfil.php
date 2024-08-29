@@ -2,7 +2,7 @@
 $pageTitle = "Mi Perfil";
 include './plantillas/header.php';
 // Incluyendo el archivo de sesión para proteger la página
-include('session.php');
+ 
 include('db.php'); // Archivo de conexión a la base de datos
 
 // Obtener el nombre de usuario desde la sesión

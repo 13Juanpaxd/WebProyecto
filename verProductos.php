@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Productos del Negocio";
 include './plantillas/header.php'; 
-include('session.php');
+ 
 include('db.php'); 
 
 // Verifica que el usuario esté autenticado

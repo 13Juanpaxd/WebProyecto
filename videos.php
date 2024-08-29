@@ -2,7 +2,7 @@
 $pageTitle = "Videos";
 include './plantillas/header.php';
 // Incluyendo el archivo de sesión para proteger la página
-include('session.php');
+ 
 
 // Conectar a la base de datos
 include 'db.php';

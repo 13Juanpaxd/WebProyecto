@@ -3,7 +3,7 @@
 $pageTitle = "Ver Video";
 include './plantillas/header.php';
 // Incluyendo el archivo de sesión para proteger la página
-include('session.php');
+ 
 
 // Verificar si se ha pasado un ID de video en la URL
 if (isset($_GET['id'])) {

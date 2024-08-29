@@ -2,7 +2,7 @@
 $pageTitle = "Mis Negocios";
 include './plantillas/header.php';
 // Incluyendo el archivo de sesión para proteger la página
-include('session.php');
+ 
 include('db.php'); // Incluye la conexión a la base de datos
 
 // Verifica que el usuario esté autenticado

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Ver Negocio";
 include './plantillas/header.php'; // Incluyendo el archivo de sesión para proteger la página
-include('session.php');
+ 
 include('db.php'); 
 
 // Verifica que el usuario esté autenticado

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Gestionar Recursos";
 include './plantillas/header.php';
-include('session.php');
+ 
 
 // Conectar a la base de datos
 require 'db.php';

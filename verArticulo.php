@@ -3,7 +3,7 @@
 $pageTitle = "Ver Artículo";
 include './plantillas/header.php';
 // Incluyendo el archivo de sesión para proteger la página
-include('session.php');
+ 
 
 // Verificar si se ha pasado un ID de artículo en la URL
 if (isset($_GET['id'])) {

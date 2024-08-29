@@ -29,12 +29,15 @@ CREATE TABLE usuarios (
 -- Crear la tabla de mensajes
 CREATE TABLE mensajes (
     id_Mensaje INT AUTO_INCREMENT PRIMARY KEY,
-    id_Usuario VARCHAR(50),
+    id_Usuario_envia VARCHAR(50),
+      id_Usuario_recibe VARCHAR(50),
     hora_Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     mensaje TEXT,
     leido ENUM('Si', 'No'),
-    FOREIGN KEY (id_Usuario) REFERENCES usuarios(username)
+    FOREIGN KEY (id_Usuario_envia) REFERENCES usuarios(username),
+     FOREIGN KEY (id_Usuario_recibe) REFERENCES usuarios(username)
 );
+
 
 -- Crear la tabla de negocios
 CREATE TABLE negocios (
@@ -72,6 +75,7 @@ CREATE TABLE me_gusta (
     id_Me_Gusta INT AUTO_INCREMENT PRIMARY KEY,
     cod_Usuario VARCHAR(50),
     cod_Producto INT,
+    visto INT DEFAULT 0,
     fecha_Hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (cod_Usuario) REFERENCES usuarios(username),
     FOREIGN KEY (cod_Producto) REFERENCES productos(id_Producto)
