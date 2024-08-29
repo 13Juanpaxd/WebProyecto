@@ -7,7 +7,6 @@ CREATE DATABASE NegociosDB;
 -- Usar la base de datos
 USE NegociosDB;
 
-
 -- Crear la tabla de usuarios
 CREATE TABLE usuarios (
     username VARCHAR(50) PRIMARY KEY,
