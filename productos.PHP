@@ -12,7 +12,11 @@ $result_negocio = $conn->query($sql_negocio);
 $negocio = $result_negocio->fetch_assoc();
 
 // Obtener productos asociados al negocio
-$sql_productos = "SELECT * FROM productos WHERE cod_Negocio = $id_negocio";
+$sql_productos = "SELECT p.*, IFNULL(COUNT(mg.id_Me_Gusta), 0) AS cant_me_gusta
+                  FROM productos p
+                  LEFT JOIN me_gusta mg ON p.id_Producto = mg.cod_Producto
+                  WHERE p.cod_Negocio = $id_negocio
+                  GROUP BY p.id_Producto";
 $result_productos = $conn->query($sql_productos);
 
 // Obtener los "Me Gusta" del usuario
@@ -57,6 +61,11 @@ while ($like = $result_likes->fetch_assoc()) {
             margin: 20px 0;
             border-top: 1px solid #ddd;
         }
+        .like-count {
+            font-size: 1rem;
+            color: #666;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -89,6 +98,7 @@ while ($like = $result_likes->fetch_assoc()) {
                                             <button type="submit" class="btn-like <?php echo in_array($producto['id_Producto'], $liked_products) ? 'liked' : ''; ?>">
                                                 <i class="fas fa-thumbs-up"></i> Me Gusta
                                             </button>
+                                            <span class="like-count"><?php echo $producto['cant_me_gusta']; ?> Me Gusta</span>
                                         </form>
                                     </div>
                                 </div>

@@ -7,10 +7,6 @@ CREATE DATABASE NegociosDB;
 -- Usar la base de datos
 USE NegociosDB;
 
--- Crear un usuario con permisos específicos
-CREATE USER 'usuario_db'@'localhost' IDENTIFIED BY 'segura_contraseña';
-GRANT ALL PRIVILEGES ON NegociosDB.* TO 'usuario_db'@'localhost';
-FLUSH PRIVILEGES;
 
 -- Crear la tabla de usuarios
 CREATE TABLE usuarios (
@@ -30,7 +26,7 @@ CREATE TABLE usuarios (
 CREATE TABLE mensajes (
     id_Mensaje INT AUTO_INCREMENT PRIMARY KEY,
     id_Usuario_envia VARCHAR(50),
-      id_Usuario_recibe VARCHAR(50),
+    id_Usuario_recibe VARCHAR(50),
     hora_Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     mensaje TEXT,
     leido ENUM('Si', 'No'),
@@ -117,14 +113,14 @@ g=AOvVaw1IqIXulq2p98_g7HpcVKZT&ust=1724621471701000&source=images&cd=vf
 e&opi=89978449&ved=0CBQQjRxqFwoTCMCUqOjJjogDFQAAAAAdAAAAABAJ', 'marta');
 
 /* Se insertan 3 mensajes */
-INSERT INTO NegociosDB.mensajes (id_Usuario, hora_Fecha, mensaje, leido) VALUES 
-('carlos', '2024-08-22 13:15:00', 'Hola, me interesa conocer sobre tu negocio', 'Si'),
-('marta', '2024-08-22 14:33:00', 'Hola Carlos, gracias por contactarnos, Pasteleria 
+INSERT INTO NegociosDB.mensajes (id_Usuario_envia, id_Usuario_recibe, hora_Fecha, mensaje, leido) VALUES 
+('carlos','marta', '2024-08-22 13:15:00', 'Hola, me interesa conocer sobre tu negocio', 'Si'),
+('marta','carlos', '2024-08-22 14:33:00', 'Hola Carlos, gracias por contactarnos, Pasteleria 
 Dulce Sazon realiza pasteles, repostería y otros productos deliciosos. Te interesa 
 algún producto en especial?', 'Si'),
-('carlos', '2024-08-22 15:05:00', 'Gracias por la respuesta, me interesa un pastel de 
+('carlos','marta', '2024-08-22 15:05:00', 'Gracias por la respuesta, me interesa un pastel de 
 cumpleaños. Dónde están ubicados?', 'Si'),
-('marta', '2024-08-22 15:20:00', 'Nos ubicamos 75 mestros este de la clinica de 
+('marta','carlos', '2024-08-22 15:20:00', 'Nos ubicamos 75 mestros este de la clinica de 
 San Rafael de Heredia', 'No');
 
 /* Se insertan 3 negocios */

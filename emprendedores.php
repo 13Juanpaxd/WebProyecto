@@ -1,11 +1,20 @@
 <?php
 $pageTitle = "Emprendimientos";
 include './plantillas/header.php';
-// Incluyendo el archivo de sesión para proteger la página
-require 'db.php'; // Asegúrate de incluir tu archivo de conexión a la base de datos
 
-// Obtener todos los negocios
-$sql_negocios = "SELECT * FROM negocios";
+// Conectar a la base de datos
+require 'db.php';
+
+// Inicializar la variable de búsqueda
+$searchTerm = "";
+
+// Verificar si se ha enviado una palabra clave de búsqueda
+if (isset($_GET['search'])) {
+    $searchTerm = $conn->real_escape_string($_GET['search']);
+}
+
+// Consulta para obtener negocios filtrados por la palabra clave de búsqueda
+$sql_negocios = "SELECT * FROM negocios WHERE nombre LIKE '%$searchTerm%' OR actividad LIKE '%$searchTerm%'";
 $result_negocios = $conn->query($sql_negocios);
 ?>
 
@@ -52,10 +61,37 @@ $result_negocios = $conn->query($sql_negocios);
             background-color: #138496;
             border-color: #117a8b;
         }
+        /* Ajustes para el formulario de búsqueda */
+        .search-form {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        .clear-btn {
+            background: none;
+            border: none;
+            color: #6c757d;
+            cursor: pointer;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
     <div class="container mt-4">
+        <!-- Formulario de búsqueda -->
+        <form class="search-form mb-4" method="GET" action="emprendedores.php">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar emprendimientos..." name="search" value="<?php echo htmlspecialchars($searchTerm); ?>">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
+                    <?php if ($searchTerm != ""): ?>
+                        <button class="clear-btn" onclick="window.location.href='emprendedores.php'" type="button">&times;</button>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </form>
+
         <div class="card mb-4 shadow-sm">
             <div class="card-header">
                 <h2 class="text-center">Emprendimientos</h2>
@@ -71,7 +107,7 @@ $result_negocios = $conn->query($sql_negocios);
                             <img src="<?php echo $negocio['ruta_Foto']; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($negocio['nombre']); ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo htmlspecialchars($negocio['nombre']); ?></h5>
-                                <p class="card-text"><strong> Dueño:</strong> <?php echo htmlspecialchars($negocio['usuario_Dueno']); ?></p>
+                                <p class="card-text"><strong>Dueño:</strong> <?php echo htmlspecialchars($negocio['usuario_Dueno']); ?></p>
                                 <p class="card-text"><strong>Fecha de Fundación:</strong> <?php echo htmlspecialchars($negocio['fecha_Fundacion']); ?></p>
                                 <a href="verEmprendimiento.php?id=<?php echo $negocio['id_Negocio']; ?>" class="btn btn-info">Ver Emprendimiento</a>
                             </div>
