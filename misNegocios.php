@@ -2,7 +2,7 @@
 $pageTitle = "Mis Negocios";
 include './plantillas/header.php';
 // Incluyendo el archivo de sesión para proteger la página
- 
+
 include('db.php'); // Incluye la conexión a la base de datos
 
 // Verifica que el usuario esté autenticado
@@ -24,6 +24,16 @@ $result = $stmt->get_result();
 
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        .card-title {
+            margin-bottom: 10px; /* Espacio entre el título y la descripción */
+        }
+        .card-text {
+            margin-top: 0; /* Asegura que no haya margen superior */
+        }
+    </style>
+</head>
 <body>
     <div class="container mt-4">
         <h2>Mis Negocios</h2>
@@ -40,9 +50,9 @@ $result = $stmt->get_result();
                     <div class="card h-100">
                         <img src="<?php echo $rutaFoto ? $rutaFoto : 'https://via.placeholder.com/150'; ?>" alt="Foto del Negocio" class="card-img-top">
                         <div class="card-body">
-                            <h4 class="card-title"><?php echo $nombre; ?></h4>
-                            <p class="card-text"><?php echo $descripcion; ?></p>
-                        </div>
+    <h4 class="card-title" style="margin-bottom: 50px;"><?php echo $nombre; ?></h4>
+    <p class="card-text" style="margin-top: 50px;"><?php echo $descripcion; ?></p>
+</div>
                         <div class="card-footer text-center">
                             <a href="editarNegocio.php?id=<?php echo $idNegocio; ?>" class="btn btn-primary">Editar o Eliminar</a>
                             <a href="verNegocio.php?id=<?php echo $idNegocio; ?>" class="btn btn-secondary">Ver Detalles</a>

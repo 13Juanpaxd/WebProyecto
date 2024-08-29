@@ -31,9 +31,13 @@ $result_negocios = $conn->query($sql_negocios);
             border: 1px solid #ddd;
             border-radius: .25rem;
             box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
         }
         .card-img-top {
-            height: 180px;
+            height: 250px;
             object-fit: cover;
         }
         .card-body {
@@ -43,19 +47,21 @@ $result_negocios = $conn->query($sql_negocios);
             text-align: center;
         }
         .card-title {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: bold;
+            margin-bottom: 0.75rem;
         }
         .card-text {
-            font-size: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
         .btn-info {
             background-color: #17a2b8;
             border-color: #17a2b8;
             color: #fff;
-            text-align: center;
-            display: block;
-            margin: 0 auto;
+            padding: 0.3rem 1rem;
+            font-size: 0.9rem;
+            display: inline-block;
         }
         .btn-info:hover {
             background-color: #138496;
@@ -102,7 +108,7 @@ $result_negocios = $conn->query($sql_negocios);
                     if ($result_negocios->num_rows > 0) {
                         while ($negocio = $result_negocios->fetch_assoc()) {
                     ?>
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-6 mb-4">
                         <div class="card">
                             <img src="<?php echo $negocio['ruta_Foto']; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($negocio['nombre']); ?>">
                             <div class="card-body">
